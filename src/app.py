@@ -15,11 +15,17 @@ with tab1:
 
         
 with tab2:
-    w0 = st.slider("Peso w0", 0.0, 5.0, 1.3, key="w0_tab2")
-    w1 = st.slider("Peso w1", 0.0, 5.0, 1.3, key="w1_tab2")
+    col1, col2 = st.columns(2)
+    with col1:
+        w0 = st.slider("Peso w0", 0.0, 5.0, 1.3, key="w0_tab2")
+    with col2:
+        w1 = st.slider("Peso w1", 0.0, 5.0, 1.3, key="w1_tab2")
 
-    x0 = st.number_input("Entrada x0", key="x0_tab2")
-    x1 = st.number_input("Entrada x1", key="x1_tab2")
+    col1, col2 = st.columns(2)
+    with col1:
+        x0 = st.number_input("Entrada x0", key="x0_tab2")
+    with col2:
+        x1 = st.number_input("Entrada x1", key="x1_tab2")
     
     y = x0 * w0 + x1 * w1
     
